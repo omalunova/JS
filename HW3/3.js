@@ -97,13 +97,13 @@ let users = [
 // - користувачів які старші за 30 років
 document.write(`<ul>`);
 for (let user of users) {
-  if (user.status === true){
+  if (user.status){
   document.write(`<li> ${user.name}`);}
 }
 document.write(`</ul>`);
 document.write(`<ul>`);
 for (let user of users) {
-  if (user.status === false){
+  if (!user.status){
     document.write(`<li> ${user.name}`);}
 }
 document.write(`</ul>`);
