@@ -175,7 +175,7 @@ class Prince  {
     this.bootSize = bootSize;
   }
 }
-
+const princeI = new Prince('Ivanko', 70, 11 );
  function WhoCinderella( CinderArr) {
     if (!this.bootSize) throw new Error('нема)')
     for (const cinderella of arr) {
