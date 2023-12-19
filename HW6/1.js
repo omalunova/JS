@@ -120,23 +120,34 @@ let cards = [
 // - всі червоні карти
 // - всі буби
 // - всі трефи від 9 та більше
-//
 // {
-//   cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
-//     value: '', // '6'-'10', 'ace','jack','queen','king','joker'
-//   color:'', // 'red','black'
+//     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
+//         value: '', // '6'-'10', 'ace','jack','queen','king','joker'
+//     color:'', // 'red','black'
 // }
-//
-let newCards = cards.filter(cards => cards.cardSuit === 'clubs' && cards.value >= '9' || cards.cardSuit === 'clubs' && cards.value >= 9);
-console.log(newCards);
-//
-//   Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
-// {
-//   spades:[],
-//     diamonds:[],
-//   hearts:[],
-//   clubs:[]
-// }
+
+// - знайти піковий туз
+spadeAce = (cards.find((card) => card.cardSuit === 'spade' && card.value === 'ace'));
+console.log(spadeAce);
+ // - всі шістки
+six = cards.find((card) => card.value === '6');
+console.log(six);
+// // - всі червоні карти
+red = (cards.filter((card) => card.color === 'red'));
+console.log(red);
+// // - всі буби
+diamond = (cards.filter((card) => card.cardSuit === 'diamond'));
+console.log(diamond);
+// // - всі трефи від 9 та більше
+clubs = cards.filter((card) => card.cardSuit === ['9', '10', 'ace', 'jack', 'queen', 'king'].includes(card.value) && 'clubs');
+console.log (clubs);
+// //   Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
+// // {
+// //   spades:[],
+// //     diamonds:[],
+// //   hearts:[],
+// //   clubs:[]
+// // }
 // =========================
 //   взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray
 // --написати пошук всіх об'єктів, в який в modules є sass
